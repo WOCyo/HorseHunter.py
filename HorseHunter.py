@@ -47,14 +47,14 @@ def parseArgs():
         return ", ".join([
             k+"="+d[k] for k in d
         ])
-    parser = argparse.ArgumentParser(description='自动向剪贴板刷新脏话，让你不再饱受欺凌')
+    parser = argparse.ArgumentParser(description='自动向剪贴板刷新金句，让你不再饱受欺凌')
 
     parser.add_argument('--target', '-t', dest='target',  choices=["female", "male", "mix"], default="female",
-                        help='设置辱骂对象, '+helpDict(targetDict))
+                        help='设置辱骂对象, '+helpDict(targetDict)+'. 默认 female')
     parser.add_argument('--level', '-l', dest='level',  choices=["max", "min", "mix"], default="max",
-                        help='设置辱骂等级, '+helpDict(levelDict))
+                        help='设置辱骂等级, '+helpDict(levelDict)+'. 默认 max')
     parser.add_argument('--interval', '-i', dest='interval', type=float, default=0.1,
-                        help='设置刷新间隔')
+                        help='设置刷新间隔(s). 默认 0.1')
 
     args = parser.parse_args()
 
