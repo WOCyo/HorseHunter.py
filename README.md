@@ -14,7 +14,7 @@
 pip install -r requirements.txt
 ```
 
-## 使用
+## 快捷使用
 
 1. 运行脚本
 
@@ -26,6 +26,21 @@ python main.py
 
 Ctrl+V, Enter, Ctrl+V, Enter, Ctrl+V, Enter...
 
+## 进阶使用
+
+```
+usage: main.py [-h] [--target {female,male,mix}] [--level {max,min,mix}]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --target {female,male,mix}, -t {female,male,mix}
+                        设置辱骂对象
+  --level {max,min,mix}, -l {max,min,mix}
+                        设置辱骂等级
+  --interval INTERVAL, -i INTERVAL
+                        设置刷新间隔
+```
+
 ## 致谢
 
-资源(resources.txt)内容来源：https://nmsl.shadiao.app
+金句资源(`resources-*.txt`)、性别替换(`replaceF2N.py`)内容来源：[直播点吧](https://nmsl.shadiao.app)
