@@ -104,8 +104,8 @@ if __name__ == "__main__":
     print(f"刷新间隔：{config['interval']}s")
 
     startTime = time.time()
-    signal.signal(signal.SIGINT, signal_handler)
     outputLinesCount = 0
+    signal.signal(signal.SIGINT, signal_handler)
 
     while True:
         outputLinesCount += 1
