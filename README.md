@@ -1,8 +1,10 @@
 # Horse Hunter
 
-猎马人顶级装备，我手中敲击键盘的光，就是令堂火化的火星
+现实生活我饱受欺凌，网上冲浪我重拳出击。
 
-> 本软件仅限用于自卫反击，向网络暴力说不！！！
+猎马人顶级装备，我手中敲击键盘的光，就是令堂火化的火星。
+
+> 注：本软件仅限用于自卫反击，向网络暴力说不！！！
 
 ## 效果
 
@@ -10,7 +12,11 @@
 
 ![preview](imgs/preview.gif)
 
-## 安装
+## 依赖
+
+1. Python >= 3.6
+
+2. [pyperclip](https://pypi.org/project/pyperclip/)
 
 ```
 pip install -r requirements.txt
