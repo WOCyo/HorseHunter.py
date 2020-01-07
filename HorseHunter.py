@@ -4,6 +4,7 @@ import argparse
 import time
 import signal
 import sys
+import os
 
 
 import pyperclip
@@ -91,13 +92,15 @@ def getLines():
 
 
 if __name__ == "__main__":
+    path = getattr(sys, '_MEIPASS', os.getcwd())
+    os.chdir(path)
+
     print("本软件仅限用于自卫反击，向网络暴力说不！！")
 
     parseArgs()
 
     lines = getLines()
 
-    print("持续输出中...")
     print("辱骂对象：" + targetDict[config["target"]])
     print("辱骂等级：" + levelDict[config["level"]])
     print(f"候选金句：{len(lines)}")
@@ -107,6 +110,7 @@ if __name__ == "__main__":
     outputLinesCount = 0
     signal.signal(signal.SIGINT, signal_handler)
 
+    print("持续输出中...")
     while True:
         outputLinesCount += 1
         pyperclip.copy(random.choice(lines))

@@ -52,6 +52,16 @@ optional arguments:
                         设置刷新间隔(s). 默认 0.1
 ```
 
+## 打包二进制文件
+
+依赖 `pyinstaller`
+
+```
+pyinstaller -F --add-data "resources-max.txt;." --add-data "resources-min.txt;." HorseHunter.py
+```
+
+将软件打包至 `dist/HorseHunter.exe`，使用方法与脚本形式相同。
+
 ## 致谢
 
 金句资源(`resources-*.txt`)、性别替换(`replaceF2M.py`)内容来源：[直播点吧](https://nmsl.shadiao.app)
