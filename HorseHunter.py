@@ -13,8 +13,6 @@ from replaceF2M import replaceF2M
 
 global targetDict
 global levelDict
-global startTime
-global outputLinesCount
 
 
 targetDict = {
@@ -28,13 +26,6 @@ levelDict = {
     "min": "口吐芬芳",
     "mix": "混合",
 }
-
-
-def signal_handler(signal, frame):
-    endTime = time.time()
-    print(f"本次使用时间：{round(endTime-startTime, 1)}s")
-    print(f"共问候对面：{outputLinesCount} 次")
-    sys.exit(0)
 
 
 def parseArgs():
@@ -105,6 +96,13 @@ if __name__ == "__main__":
 
     startTime = time.time()
     outputLinesCount = 0
+
+    def signal_handler(signal, frame):
+        endTime = time.time()
+        print(f"本次使用时间：{round(endTime-startTime, 1)}s")
+        print(f"共问候对面：{outputLinesCount} 次")
+        sys.exit(0)
+
     signal.signal(signal.SIGINT, signal_handler)
 
     print("持续输出中...")
