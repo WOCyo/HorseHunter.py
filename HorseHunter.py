@@ -11,17 +11,11 @@ import pyperclip
 
 from replaceF2M import replaceF2M
 
-global config
 global targetDict
 global levelDict
 global startTime
 global outputLinesCount
 
-config = {
-    "target": "female",
-    "level": "max",
-    "interval": 0.1
-}
 
 targetDict = {
     "female": "令堂",
@@ -62,12 +56,15 @@ def parseArgs():
     if args.interval < 0:
         raise argparse.ArgumentTypeError("assert: INTERVAL >= 0")
 
+    config = {}
     config["target"] = args.target
     config["level"] = args.level
     config["interval"] = args.interval
 
+    return config
 
-def getLines():
+
+def getLines(config):
 
     linesFemale = []
     linesMale = []
@@ -97,9 +94,9 @@ if __name__ == "__main__":
 
     print("本软件仅限用于自卫反击，向网络暴力说不！！")
 
-    parseArgs()
+    config = parseArgs()
 
-    lines = getLines()
+    lines = getLines(config)
 
     print("辱骂对象：" + targetDict[config["target"]])
     print("辱骂等级：" + levelDict[config["level"]])
