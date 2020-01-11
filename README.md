@@ -18,9 +18,26 @@
 
 2. [pyperclip](https://pypi.org/project/pyperclip/)
 
+3. PyQt5 (GUI version only)
+
 ```
 pip install -r requirements.txt
 ```
+
+## GUI 版本
+
+1. 前往 [Release](https://github.com/forewing/HorseHunter.py/releases) 下载最新程序 (HorseHunterGUI.exe)
+
+> BROKEN RIGHTNOW!!!
+> USE `python HorseHunterGUI.py` INSTEAD
+
+2. 运行
+
+![gui](imgs/gui.jpg)
+
+> 更改设置后需要 Stop 再 Start 以应用更改
+
+
 
 ## 快捷使用
 
@@ -55,6 +72,16 @@ optional arguments:
 ## 打包二进制文件
 
 依赖 `pyinstaller`
+
+1. GUI
+
+```
+pyinstaller -F --add-data "resources-max.txt;." --add-data "resources-min.txt;." --noconsole HorseHunterGUI.py
+```
+
+> BROKEN NOW!!!
+
+2. CLI
 
 ```
 pyinstaller -F --add-data "resources-max.txt;." --add-data "resources-min.txt;." HorseHunter.py
