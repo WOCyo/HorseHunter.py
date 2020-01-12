@@ -28,9 +28,6 @@ pip install -r requirements.txt
 
 1. 前往 [Release](https://github.com/forewing/HorseHunter.py/releases) 下载最新程序 (HorseHunterGUI.exe)
 
-> BROKEN RIGHTNOW!!!
-> USE `python HorseHunterGUI.py` INSTEAD
-
 2. 运行
 
 ![gui](imgs/gui.jpg)
@@ -78,8 +75,6 @@ optional arguments:
 ```
 pyinstaller -F --add-data "resources-max.txt;." --add-data "resources-min.txt;." --noconsole HorseHunterGUI.py
 ```
-
-> BROKEN NOW!!!
 
 2. CLI
 
