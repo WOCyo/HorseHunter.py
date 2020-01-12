@@ -6,7 +6,7 @@ from PyQt5.QtWidgets import (QApplication, QButtonGroup, QDesktopWidget,
                              QWidget, QLineEdit)
 from PyQt5.QtGui import QDoubleValidator
 
-from multiprocessing import Process
+from multiprocessing import Process, freeze_support
 
 from HorseHunter import *
 import pyperclip
@@ -120,6 +120,7 @@ class Main(QWidget):
 
 
 if __name__ == '__main__':
+    multiprocessing.freeze_support()
     path = getattr(sys, '_MEIPASS', os.getcwd())
     os.chdir(path)
 
