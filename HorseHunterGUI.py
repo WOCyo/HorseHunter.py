@@ -10,6 +10,7 @@ from multiprocessing import Process, freeze_support
 
 from HorseHunter import *
 import pyperclip
+import atexit
 
 
 def job(lines, interval):
@@ -31,6 +32,7 @@ class Main(QWidget):
 
         self.status = False
         self.process = None
+        atexit.register(self.killProcess)
 
         self.initUI()
 
