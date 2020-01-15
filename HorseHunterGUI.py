@@ -122,7 +122,7 @@ class Main(QWidget):
 
 
 if __name__ == '__main__':
-    multiprocessing.freeze_support()
+    freeze_support()
     path = getattr(sys, '_MEIPASS', os.getcwd())
     os.chdir(path)
 
