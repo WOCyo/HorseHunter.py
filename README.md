@@ -20,6 +20,8 @@
 
 3. PyQt5 (GUI version only)
 
+4. Flask (API version only)
+
 ```
 pip install -r requirements.txt
 ```
@@ -83,6 +85,28 @@ pyinstaller -F --add-data "resources-max.txt;." --add-data "resources-min.txt;."
 ```
 
 将软件打包至 `dist/HorseHunter.exe`，使用方法与脚本形式相同。
+
+## API
+
+提供 Flask API 于 `HorseHunterAPI.py` 中。
+
+可通过
+
+```
+$ FLASK_APP=HorseHunterAPI.py flask run
+```
+
+或
+
+```
+python HorseHunterAPI.py # Bind 127.0.0.1:6675
+```
+
+或其他途径运行，详细配置请参考 [Flask Documentation](http://flask.palletsprojects.com/en/1.1.x/)
+
+| URL | 方法 | 参数 | 返回值 |
+| :- | :- | :- | :- |
+| `/api` | GET | `[level={max, min, mix}]`, `[target={female, male, mix}]` 若参数空缺或不合法，分别填补默认值 `level=max`, `target=female`| 参数所指定的金句范围内随机抽取一条字符串 |
 
 ## 致谢
 

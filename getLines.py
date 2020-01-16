@@ -1,3 +1,6 @@
+VALID_LEVEL = ["max", "min", "mix"]
+VALID_TARGET = ["female", "male", "mix"]
+
 def getLines(config):
 
     linesFemale = []
