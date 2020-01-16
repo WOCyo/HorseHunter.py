@@ -1,16 +1,17 @@
-import sys
+import atexit
 import os
-
-from PyQt5.QtWidgets import (QApplication, QButtonGroup, QDesktopWidget,
-                             QGridLayout, QLabel, QPushButton, QRadioButton,
-                             QWidget, QLineEdit)
-from PyQt5.QtGui import QDoubleValidator
-
+import random
+import sys
+import time
 from multiprocessing import Process, freeze_support
 
-from HorseHunter import *
 import pyperclip
-import atexit
+from PyQt5.QtGui import QDoubleValidator
+from PyQt5.QtWidgets import (QApplication, QButtonGroup, QDesktopWidget,
+                             QGridLayout, QLabel, QLineEdit, QPushButton,
+                             QRadioButton, QWidget)
+
+from getLines import getLines
 
 
 def job(lines, interval):
