@@ -4,7 +4,9 @@
 
 猎马人顶级装备，我手中敲击键盘的光，就是令堂火化的火星。
 
-> 注：本软件仅限用于自卫反击，向网络暴力说不！！！
+> 注：本软件仅限用于自卫反击，向网络暴力说不！
+
+![build](https://github.com/forewing/HorseHunter.py/workflows/build/badge.svg)
 
 ## 效果
 
