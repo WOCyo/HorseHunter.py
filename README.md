@@ -27,7 +27,7 @@
 4. Flask (API version only)
 
 ```
-pip install -r requirements.txt
+pip install -r requirements-{VERSION}.txt
 ```
 
 ## GUI 版本

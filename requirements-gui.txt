@@ -1,3 +1,2 @@
 pyperclip
 pyqt5
-Flask
