@@ -6,7 +6,8 @@
 
 > 注：本软件仅限用于自卫反击，向网络暴力说不！
 
-![build](https://github.com/forewing/HorseHunter.py/workflows/build/badge.svg) ![discord](https://img.shields.io/discord/685679145271033877)
+[![build](https://github.com/forewing/HorseHunter.py/workflows/build/badge.svg)](https://github.com/forewing/HorseHunter.py/actions)
+[![discord](https://img.shields.io/discord/685679145271033877)](https://discord.com/channels/685679145271033877/685682410930831369)
 
 ## 效果
 
