@@ -20,6 +20,10 @@ def job(lines, interval):
         time.sleep(interval)
 
 
+def clearClip():
+    pyperclip.copy("")
+
+
 class Main(QWidget):
     def __init__(self):
         super().__init__()
@@ -98,6 +102,7 @@ class Main(QWidget):
         self.move(qr.topLeft())
 
     def killProcess(self):
+        clearClip()
         if self.process and self.process.is_alive():
             self.process.terminate()
             self.process = None
@@ -123,6 +128,8 @@ class Main(QWidget):
 
 
 if __name__ == '__main__':
+    atexit.register(clearClip)
+
     freeze_support()
     path = getattr(sys, '_MEIPASS', os.getcwd())
     os.chdir(path)
@@ -130,5 +137,7 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
 
     main = Main()
+
+    app.aboutToQuit.connect(main.killProcess)
 
     sys.exit(app.exec_())

@@ -4,6 +4,7 @@ import random
 import signal
 import sys
 import time
+import atexit
 
 import pyperclip
 
@@ -53,7 +54,13 @@ def parseArgs():
     return config
 
 
+def clearClip():
+    pyperclip.copy("")
+
+
 if __name__ == "__main__":
+    atexit.register(clearClip)
+
     path = getattr(sys, '_MEIPASS', os.getcwd())
     os.chdir(path)
 
